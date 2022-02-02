@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="supply/baseM::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>dashboard</title>
+</head>
+<body>
+<section>
+
+	    <div class="card mr-5 ml-3">
+	    	<div class="card-body">
+	    		<h1 class="text-center">Producer History</h1>
+	    		<table class="table table-striped mt-5 auto-index mb-6">
+  <thead>
+    <tr>
+      <th scope="col"> </th>
+      <th scope="col">Waste Type </th>
+      <th scope="col">Weight</th> 
+      <th scope="col">Amount</th> 
+      <th scope="col">Order Booked Date</th>
+      <th scope="col">Order Placed Date</th> 
+      <th scope="col">Status</th>
+      <th scope="col">Update</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="c : ${history}">
+      <td ></td>
+   	  <td th:text="${c.wasteType}"></td>
+     
+      <td th:text="${c.weight}"></td>
+      <td th:text="${c.amount}"></td>
+      <td th:text="${c.orderDate}"></td>
+      <td th:text="${c.date}"></td>
+      <td th:text="${c.Role}"></td>
+      <td>
+      <form method="post" th:action="@{'/supply/update/'+ ${c.cId}}">
+     <button type="submit"> <i class="fab fa-bitbucket"></i> Update </button>
+      </form>
+     </td>
+    </tr>
+  </tbody>
+</table>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-end">
+    <li th:if="${currentPage != 0}" class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li th:classappend="${currentPage==i-1?'active':''}" th:each="i: ${#numbers.sequence(1,totalPage)}" class="page-item"><a th:href="@{'/supply/history/' +${i-1} + '/'+${user.email}}" class="page-link" href="#"><span th:text="${i}"></span></a></li>
+   
+    <li th:if="${currentPage+1 != totalPage}" class="page-item disabled">
+      <a  class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>	    		
+	    	</div>
+	    </div>
+</section>
+
+</body>
+</html>

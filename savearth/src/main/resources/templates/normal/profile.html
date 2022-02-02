@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>dashboard</title>
+</head>
+<body>
+<section>
+
+	
+	    
+	    <div class="container">
+	    
+	   <div class="card">
+	   <div class="card-body">
+	   <div class="container text-center">
+	    <img src="" alt="" style="height:200px; width:200px;" class="my-profile" th:src="@{'/image/' + ${user.imgUrl}}"/>
+	   </div>
+	  
+	   <h1 class="text-center" th:text="${user.name}">  </h1>
+	    <table class="table text-center table-striped mt-5 auto-index mb-6">
+	    
+	    <thead>
+	    <tr>
+	     <th scope="col"> User Id </th>
+	      <td scope="col"> <span th:text="${user.id}"></span></td>
+	    </tr>
+	    </thead>
+	    
+	    <tbody>
+	    <tr>
+	    <th scope="row">Name </th>
+	    <td><span th:text="${user.role}"></span></td>
+	    </tr>
+	    
+	     <tr>
+	    <th scope="row">Email </th>
+	    <td><span th:text="${user.email}"></span></td>
+	    </tr>
+	    
+	     <tr>
+	    <th scope="row">Conatct </th>
+	    <td><span th:text="${user.contact}"></span></td>
+	    </tr>
+	    
+	     <tr>
+	    <th scope="row">Waste Type </th>
+	    <td><span th:text="${user.wasteType}"></span></td>
+	    </tr>
+	    
+		 <tr>
+	    <th scope="row">About you </th>
+	    <td><span th:text="${user.about}"></span></td>
+	    </tr>
+	    
+	    
+	    </tbody>
+	    
+	    </table>
+	   </div>
+	   </div>
+	    
+	    </div>
+	    
+</section>
+
+</body>
+</html>

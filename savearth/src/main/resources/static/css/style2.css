@@ -1,0 +1,179 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" ;
+html,
+body {
+  height: 100%;
+  /* width: 415px;
+  height:700px ; */
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-family: 'PT Serif', serif;
+  background-color: #544437;
+  background-image:linear-gradient(rgb(15 14 14 / 94%),rgba(14, 13, 13, 0.5)) ,url("/image/main.jpg");
+  background-repeat:  no-repeat;
+  background-size: cover; 
+  background-position: center;
+  color: white;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  
+}
+hr{
+    float: left;
+    border-bottom: 5px solid;
+    margin-bottom: 3em;
+    width: 100%;
+}
+p{
+    margin-top: 2em;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+ p a:hover{
+    color: rgb(187, 159, 122);
+    font-size: 1.25em;
+}
+.form-signin .checkbox1 {
+  font-weight: 400;
+  text-transform: lowercase;
+    margin-top: 1em;
+    border-radius: 5px;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 19px;
+  color:white;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+form{
+    right: 10em;
+    width: auto;
+}
+form .col-sm-4{
+    width: 100% !important;
+}
+
+.form-signin input[type="text"] ,input[type="email"] ,input[type="email"] input[type="password"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  font-size: 19px;
+  
+ 
+}
+.form-signin  input[type="password"]{
+  /* margin-bottom: 10px; */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  
+}
+.btn{
+color: white;
+background-color: black;
+border: 1px solid white;
+border-radius: 2em;
+margin-top: 1em;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem!important;
+    text-transform: uppercase;
+}
+.register-head{
+    line-height: 2em;
+    text-align: center;
+}
+
+button{
+    margin-bottom: 1.5em !important;
+}
+
+.form-signin form input  {
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 5px solid b;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    color: white;
+} 
+.select-type {
+    display:inline-block;
+    position: relative;
+    margin-bottom: 2em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    appearance: none;
+    border:0px !important;
+    outline:0px !important;
+
+    
+}
+
+.select-type:before {
+    font-family: 'FontAwesome';
+    content: '\f274';
+    position: absolute;
+    right: 289px;
+    top: 0.5em;
+}
+select#TyoeOfWaste.form-select{
+    border: 0 !important;
+}
+.select-type:after{
+    color: white;
+}
+select {
+    font-family: 'Font Awesome\ 5 Brands' , 'arial'
+  }
+ textarea.form-control{
+    background-color: rgba(0, 0, 0, 0);
+   border: none;
+   height: 50px;
+   width: 100%;
+   left: 1.85em;
+   bottom: 2em;
+}
+textarea.form-control:hover{
+    background-color: transparent;
+    color: white;
+}
+
+
+select{
+    background-color: transparent !important;
+    border: none;
+    color: white;
+}
+.soon{
+    margin-bottom: 2em !important;
+}
+h1{
+    text-align: left;
+}
+.text-center{
+    text-align: left !important;
+}
+.eye{
+    position: absolute;
+    margin-left: 3em;
+}
+#hide1{
+    display: none;
+}

@@ -1,0 +1,77 @@
+  <!doctype html>
+  <html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+  <head>
+  	<meta charset="UTF-8" />
+  	<title>Document</title>
+  </head>
+  <body>
+  	<section class="d-flex justify-content-center align-items-center">
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<div class="my-card mt-3">
+				<div class="container text-center">
+				<img style="width:80px" th:src="@{/image/register.png}" alt="" />
+				</div>
+				<h1 style="margin-bottom:30px" class="text-center">Producer Login Here !!</h1>
+			
+			<form novalidate id ="login-form" class="form" th:action="@{/user/index}" method="post" >
+				
+				<!--   ------------------------------ error msg ------------------------- -->
+     
+       <div  th:if="${param.error}" class="alert alert-danger">
+       Invalid username and password
+       </div>
+			
+	   <div th:if="${param.logout}" class="alert alert-success" >
+       You have been successfully logout
+       </div>	
+       
+        <div th:if="${session.message}" th:classappend="${session.message.type}" class="alert alert-dismissible fade show" role="alert">
+     	 <p th:text="${session.message.content}"></p>
+      <th:block th:text="${#session.removeAttribute('message')}" ></th:block>
+ 		 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+ 	   <span aria-hidden="true">&times;</span>
+ 		 </button>
+		</div>
+				<div class="form-group">
+  				  <label for="name">Username</label>
+ 			      <input  type="text" class="form-control" name="username" id="name" placeholder="Enter your username here" required />
+ 			      </div>
+  
+ 			      
+  
+  				<div class="form-group">
+  				  <label for="password">Password</label>
+ 			      <input type="password" class="form-control" name="password" id="password"  placeholder="Confirm Password" required>
+ 			       </div>
+ 			       
+ 			        <!-- Checkbox -->
+ 			     <div class="d-flex justify-content-between align-items-center">
+	               <div class="form-check d-flex justify-content-start mb-4">
+	              <input
+	                class="form-check-input"
+	                type="checkbox"
+	                value=""
+	                id="Checkbox"
+	              />
+	              <label class="form-check-label" for="Checkbox"> Remember password </label>
+	            </div>  <a href="#!" class="text-body">Forgot password?</a></div>
+  	
+			    
+			    <div class="text-center">
+			      <button style="margin-top:30px" type="submit" class="btn btn-primary">Submit</button>
+			       <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="/p-register"
+                class="link-danger">Register</a></p>
+			    </div>
+					</form>
+			
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+  </body>
+  </html>
+ 

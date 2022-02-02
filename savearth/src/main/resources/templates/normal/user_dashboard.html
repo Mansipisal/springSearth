@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>dashboard</title>
+</head>
+<body>
+<section>
+
+	<div class="container">
+	
+	<div class="card">
+	<div class="card-body">
+	<div class="container text-center">
+	<h1 class="text-center mt-2 mb-3"> Producer Dashboard </h1>
+	  <img src="" alt="" style="height:200px; width:200px; border-radius: 25px;" class="my-profile" th:src="@{'/image/garbage.png' }"/>
+	
+	<h1 class="text-center mt-3 text-secondary font-italic font-weight-light"> We realise that generating waste is not in your hand, but appropriately disposing it, is!  </h1>
+	<p  class="text-center mt-3 text-secondary font-italic">Kudos on your efforts </p>
+	
+	 <div class="container text-center mt-5 mb-2 mr-5">
+		<a th:src="@{/user/order}" >	<button  style="font-size:25px;" class="btn btn-outline-dark" >
+			start Collecting waste for recycle</button></a>
+			</div>
+	
+	</div>
+	</div>
+	</div>
+	
+	</div>
+	    
+</section>
+
+</body>
+</html>

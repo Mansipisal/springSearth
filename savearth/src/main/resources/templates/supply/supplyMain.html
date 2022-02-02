@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+ <style type="text/css">
+   
+    
+    
+        
+        
+        </style>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+	<link rel="stylesheet" th:href="@{/css/bin.css}" />
+	<link rel="shortcut icon" th:href="@{/image/favicon.png.ico}" />
+    <title th:text="${title}" >Hello, world!</title>
+    
+  
+    
+  </head>
+  <body>
+   <!-- Navbar start  -->
+   
+   <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+     <a class="navbar-brand" th:href="@{/}">
+    <img src="/image/logo.png" alt="" width="48" height="46" class="d-inline-block " >  sEarth</a>
+  
+ 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+     <ul class="navbar-nav ml-auto">
+      
+        <li class="nav-item">
+   
+        </li>
+        
+          <li class="nav-item">
+          <a class="nav-link active" th:href="@{/}">Home</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/logout}">Logout</a>
+        </li>
+      </ul>
+   
+  </div>
+</nav>
+
+
+
+		<div class="sidebar">
+		<span onclick="toggleSidebar()" class="cross-btn">
+		&times;
+		</span>
+		<a href="#" class="item"><i class="fas fa-home"></i> Home</a>
+		<a href="#" th:href="@{'/supply/history/0'+ '/'+ ${user.email}}" class="item"><i class="fab fa-bitbucket"></i> Consumer History</a>
+	    <a href="#"  th:href="@{'/supply/phistory/0' + ${user.email}}"  class="item"><i class="fab fa-bitbucket"></i> Producer History</a>
+		<a href="#"  th:href="@{/logout}" class="item"><i class="fas fa-sign-out-alt"></i>  Logout</a>
+	
+		<div class="divider"></div>
+		</div>
+		 
+		 <div class="content">
+		 
+		 <i onclick="toggleSidebar()" class="fas fa-bars m-3"></i>
+		 
+		 
+		  <div class="container">
+	
+	<div class="card">
+	<div class="card-body">
+	<div class="container text-center">
+	<h1 class="text-center mt-2 mb-3"> Supplier Dashboard </h1>
+	  <img src="" alt="" style="height:200px; width:200px; border-radius: 25px;" class="my-profile" th:src="@{'/image/supplier.png' }"/>
+	
+	<h1 class="text-center mt-3 text-secondary font-italic font-weight-light"> We realise that generating waste is not in your hand, but appropriately disposing it, is!  </h1>
+	<p  class="text-center mt-3 text-secondary font-italic"></p>
+	
+	 <div class="container text-center mt-5 mb-2 mr-5">
+		<a th:src="@{/user/order}" >	<button  style="font-size:25px;" class="btn btn-outline-dark" >
+			Kudos on your efforts </button></a>
+			</div>
+	
+	</div>
+	</div>
+	</div>
+	
+	</div>
+		 
+ </div>
+
+  
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+    <script type="text/javascript" th:src="@{/js/script.js}"></script>
+  </body>
+</html>

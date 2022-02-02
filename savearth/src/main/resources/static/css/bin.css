@@ -1,0 +1,56 @@
+.bin-body{
+    margin:0;
+     padding:150px 0;
+    }
+    
+div .bin-body{
+    position:relative;
+    left:30%;
+    width:150px;
+    height:300px;
+    background:#cfcfcf;
+    border-radius:70px/40px;
+    overflow: hidden; 
+  }
+    
+    #cylinder2:before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 150px;
+   height: 70px;
+   border-radius: 100px/50px;
+   background: #c2c2c2;
+}
+   
+    #water{
+   				 position: absolute;
+			    left: 0;
+			    bottom: 0;
+			    width: 150px;
+			    height: 100px;
+			    background: #4E9F3D;
+			    border-radius: 100px/50px;
+			    transition: 3s;
+    }
+    #water:before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 150px;
+   height: 70px;
+   border-radius: 100px/50px;
+   background: #3E7C17;
+}
+   #water:after{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 150px;
+   height: 70px;
+   border-radius: 100px/50px;
+   background: #3E7C17;
+}   
